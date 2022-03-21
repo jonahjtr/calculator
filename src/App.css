@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  background: linear-gradient(to right, rgb(15, 242, 250), rgb(91, 238, 165));
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  border: 1px solid black;
+}
+.span2 {
+  grid-column: span 2;
+  border-radius: 45px;
+}
+.output {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: rgba(7, 74, 77, 0.75);
+  grid-column: 1 / -1;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+.prevnum {
+  font-size: 1rem;
+}
+.currnum {
+  font-size: 2rem;
+}
+button {
+  border: 1px solid rgba(15, 242, 250, 0.9);
+  margin: 0.25rem;
+}
+.single {
+  border-radius: 50%;
+}
