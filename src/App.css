@@ -17,7 +17,7 @@ body {
   margin-top: 5rem;
   display: grid;
   grid-template-columns: repeat(4, 6rem);
-  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  grid-template-rows: minmax(8rem, auto) repeat(5, 6rem);
   border: 1px solid black;
 }
 .span2 {
@@ -25,7 +25,6 @@ body {
   border-radius: 45px;
 }
 .output {
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -34,14 +33,19 @@ body {
   grid-column: 1 / -1;
   padding: 0.75rem;
   margin-bottom: 1rem;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 .prevnum {
+  color: rgba(255, 255, 255, 0.582);
   font-size: 1rem;
 }
 .currnum {
+  color: white;
   font-size: 2rem;
 }
 button {
+  font-size: 1.75rem;
   border: 1px solid rgba(15, 242, 250, 0.9);
   margin: 0.25rem;
 }
