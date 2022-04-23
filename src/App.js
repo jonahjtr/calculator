@@ -22,6 +22,12 @@ function reducer(state, { type, payload }) {
         };
       }
       if (payload.digit === "0" && state.currnum === "0") return state;
+      if (payload.digit === "." && state.currnum === undefined) {
+        return {
+          ...state,
+          currnum: ".",
+        };
+      }
       if (payload.digit === "." && state.currnum.includes(".")) return state;
       return {
         ...state,
@@ -89,7 +95,7 @@ function reducer(state, { type, payload }) {
 function evaluate({ currnum, prevnum, operation }) {
   const prev = parseFloat(prevnum);
   const curr = parseFloat(currnum);
-  if (isNaN(prev) || isNaN(curr)) return " ";
+  if (isNaN(prev) || isNaN(curr)) return "";
   let computation = " ";
   switch (operation) {
     case "+":
