@@ -1,3 +1,7 @@
+:root {
+     color-scheme: light only;
+}
+
 body {
   margin: 0;
   background: linear-gradient(to right, rgb(15, 242, 250), rgb(91, 238, 165));
